@@ -3,6 +3,7 @@ import os
 
 print 'Account is ' + os.environ['ACCOUNT']
 
+# File stuff
 templateFile = open("/root/keyExporter/genesis.template").read()
 jsonFile = open("/root/keyExporter/genesis.json","w")
 
