@@ -7,9 +7,9 @@ ENV LANG en_US.UTF-8
 RUN cd /root/keyExporter && npm install && dos2unix genesis.template
 
 RUN echo "ciao" > password.txt 
-RUN export ACCOUNT=$(geth --password password.txt account new | awk '{print $2}' | tr -d '{' | tr -d '}') && python /root/keyExporter/replace.py
+RUN export ACCOUNT=$(/usr/bin/geth --password password.txt account new | awk '{print $2}' | tr -d '{' | tr -d '}') && python /root/keyExporter/replace.py
 
-RUN geth --networkid "1900" init /root/keyExporter/genesis.json 
+RUN /usr/bin/geth --networkid "1900" init /root/keyExporter/genesis.json
 
 EXPOSE 3000
 
