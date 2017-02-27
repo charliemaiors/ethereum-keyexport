@@ -14,4 +14,3 @@ RUN /geth --networkid "1900" init /root/keyExporter/genesis.json
 EXPOSE 3000
 
 ENTRYPOINT supervisord
-
