@@ -1,7 +1,7 @@
 import json
 import os
 
-print 'docker jenkins hook test'
+print 'test'
 print 'Account is ' + os.environ['ACCOUNT']
 
 # File stuff
