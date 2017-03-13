@@ -1,7 +1,6 @@
 import json
 import os
 
-print 'testing'
 print 'Account is ' + os.environ['ACCOUNT']
 
 # File stuff
