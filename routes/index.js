@@ -21,7 +21,7 @@ router.get('/address/:address', function (req, res, next) {
 })
 
 router.get('/accounts', function (req, res, next) {
-    Promise.resolve(keyexport.accounts()).then(p => res.json(p));
+    Promise.resolve(keyexport.accounts()).then(p => res.json(p['result']));
 })
 
 module.exports = router;
