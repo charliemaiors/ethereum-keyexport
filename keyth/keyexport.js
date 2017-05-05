@@ -42,7 +42,7 @@ async function accounts() {
     var pers = new personal.Personal(options)
     account_list = await pers.list_accounts();
     console.log(account_list);
-    return account_list;
+    return account_list['result'];
 }
 
 module.exports = {importKey,accounts};
