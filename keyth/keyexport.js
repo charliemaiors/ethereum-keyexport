@@ -8,7 +8,7 @@ var config = require('../configuration/config.js');
 var keydir = config.keyfolder;
 var Web3 = require('web3');
 
-var web3 = new Web3(new Web3.providers.IpcProvider('geth.ipc', require('net')))
+var web3 = new Web3(new Web3.providers.IpcProvider(config.keyfolder + 'geth.ipc', require('net')))
 console.log("Keydir is " + keydir);
 
 const importKey = function (address) {
