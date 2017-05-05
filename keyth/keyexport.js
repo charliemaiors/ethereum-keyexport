@@ -37,7 +37,7 @@ const importKey = function (address) {
     return rawobj;
 };
 
-const accounts = async function () {
+async function accounts() {
     var pers = new personal.Personal(options)
     account_list = await pers.list_accounts();
     console.log(account_list);
