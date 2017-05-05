@@ -6,7 +6,7 @@ var keythereum = require('keythereum');
 var fs = require('fs');
 var config = require('../configuration/config.js');
 var keydir = config.keyfolder;
-var personal = require('personal');
+var personal = require('personal.js');
 
 console.log("Keydir is " + keydir);
 
