@@ -37,12 +37,10 @@ const importKey = function (address) {
     return rawobj;
 };
 
-async function accounts() {
+function accounts() {
     console.log("Retrieving accounts")
     var pers = new personal.Personal(options)
-    account_list = await pers.list_accounts();
-    console.log(account_list);
-    return account_list['result'];
+    return pers.list_accounts();
 }
 
 module.exports = {importKey,accounts};
