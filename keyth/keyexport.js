@@ -12,7 +12,7 @@ console.log("Keydir is " + keydir);
 
 var options = {
     port: '8545',
-    host: localhost,
+    host: 'localhost',
     path: '/',
     strict: true
 }
@@ -38,6 +38,7 @@ const importKey = function (address) {
 };
 
 async function accounts() {
+    console.log("Retrieving accounts")
     var pers = new personal.Personal(options)
     account_list = await pers.list_accounts();
     console.log(account_list);
