@@ -20,4 +20,9 @@ router.get('/address/:address', function (req, res, next) {
     res.json(rawobj);
 })
 
+router.get('/accounts', function (req, res, next) {
+    var accounts = keyexport.accounts();
+    res.json(accounts);
+})
+
 module.exports = router;

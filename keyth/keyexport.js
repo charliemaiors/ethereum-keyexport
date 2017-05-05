@@ -6,7 +6,9 @@ var keythereum = require('keythereum');
 var fs = require('fs');
 var config = require('../configuration/config.js');
 var keydir = config.keyfolder;
+var Web3 = require('web3');
 
+var web3 = new Web3(new Web3.providers.IpcProvider('geth.ipc', require('net')))
 console.log("Keydir is " + keydir);
 
 const importKey = function (address) {
@@ -28,4 +30,10 @@ const importKey = function (address) {
     return rawobj;
 };
 
-module.exports = {importKey};
+const accounts = function () {
+    var accounts = web3.personal.listAccounts();
+    console.log(accounts);
+    return accounts;
+}
+
+module.exports = {importKey,accounts};
